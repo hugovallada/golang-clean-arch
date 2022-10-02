@@ -11,6 +11,7 @@ func Routes() http.Handler {
 	router := chi.NewRouter()
 
 	router.Post("/products", controller.CreateProduct)
+	router.Get("/products", controller.GetAll)
 
 	return router
 }
